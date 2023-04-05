@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <script>
+      function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var privacy = document.getElementById("privacy").checked;
+
+        if (username === "admin" && password === "1234" && privacy) {
+          alert("Login OK");
+        } else if (!privacy) {
+          alert("You must accept the privacy policy");
+        } else {
+          alert("Wrong Username and Password");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+
+      <input type="checkbox" id="privacy" name="privacy">
+      <label for="privacy">I agree to the privacy policy</label><br><br>
+
+      <input type="button" value="Submit" onclick="login()">
+    </form>
+  </body>
+</html>
